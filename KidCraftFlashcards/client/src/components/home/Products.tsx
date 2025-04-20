@@ -186,7 +186,7 @@ export default function Products() {
               <Swiper
                 onSwiper={setSwiperInstance}
                 slidesPerView={1}
-                spaceBetween={0}
+                spaceBetween={10}
                 loop={true}
                 pagination={{
                   clickable: true,
@@ -234,8 +234,6 @@ export default function Products() {
           </motion.div>
         </div>
       </div>
-      
-      {/* Swiper styling is added via CSS */}
     </section>
   );
 }
