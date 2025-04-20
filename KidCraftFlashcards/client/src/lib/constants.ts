@@ -16,7 +16,7 @@ export const COMPANY_INFO = {
   address: "Dolatpara Main Road, B/h. Shiv Hotel, Rajkot-Gondal Highway, Kothariya Solvent, Rajkot-Gujarat.",
   phone: "+91 7990849025", // Primary phone number
   secondaryPhone: "+91 79845 35931", // Secondary phone number
-  email: "info@kidcraft.com",
+  email: "kidkraftco2@gmail.com",
   instagram: "https://www.instagram.com/kidkraft.co?igsh=dzBsMmNldmJ1aDg5",
   manufacturer: "DIVINE BROTHERS GROUP"
 };

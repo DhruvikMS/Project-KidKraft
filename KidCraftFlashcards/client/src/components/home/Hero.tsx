@@ -68,7 +68,7 @@ export default function Hero() {
                 <img src="https://res.cloudinary.com/dutdrr57w/image/upload/f_webp/v1745126184/fruit_flash_card_02_s4eosi.jpg" alt="Fruit Flashcard" className="w-full object-cover" />
               </motion.div>
               <div className="relative z-10 shadow-2xl rounded-xl overflow-hidden bg-white">
-                <img src="https://res.cloudinary.com/dutdrr57w/image/upload/f_webp/v1745126151/background_5_d9ekzi.jpg" alt="KidCraft Flashcards" className="w-full object-cover" />
+                <img src="https://res.cloudinary.com/dutdrr57w/image/upload/f_webp/v1745126151/background_5_d9ekzi.jpg" alt="KidKraft Flashcards" className="w-full object-cover" />
               </div>
             </div>
           </motion.div>
