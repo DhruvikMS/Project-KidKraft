@@ -1,0 +1,146 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 98%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 210 73% 58%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 88 77% 45%;
+    --secondary-foreground: 210 40% 98%;
+
+    --accent-1: 14 100% 70%;
+    --accent-2: 291 74% 42%;
+    --accent-3: 45 100% 58%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 1.0rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-opensans antialiased bg-background text-foreground;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-baloo font-bold;
+  }
+}
+
+@layer components {
+  .container {
+    @apply px-4;
+  }
+}
+
+/* Flip card animation styles */
+.flip-card {
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-card-front, .flip-card-back {
+  backface-visibility: hidden;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+
+.flip-card.flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Swiper styles */
+.product-swiper {
+  --swiper-pagination-color: #4a90e2;
+  --swiper-pagination-bullet-inactive-color: #cccccc;
+  --swiper-navigation-color: #4a90e2;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.product-swiper .swiper-button-prev,
+.product-swiper .swiper-button-next {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  color: transparent;
+  background: transparent;
+}
+
+.product-swiper .swiper-button-prev::after,
+.product-swiper .swiper-button-next::after {
+  display: none;
+}
+
+.product-swiper .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+}
+
+/* Product Detail swiper styles */
+.product-detail-swiper {
+  --swiper-pagination-color: #4a90e2;
+  --swiper-pagination-bullet-inactive-color: #cccccc;
+  --swiper-navigation-color: #4a90e2;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.product-thumbs-swiper .swiper-slide {
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.product-thumbs-swiper .swiper-slide-thumb-active {
+  opacity: 1;
+  border: 2px solid #4a90e2;
+  border-radius: 0.375rem;
+}
+
+.detail-swiper-button-prev,
+.detail-swiper-button-next {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
