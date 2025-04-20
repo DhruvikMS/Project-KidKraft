@@ -58,6 +58,12 @@
   .container {
     @apply px-4;
   }
+
+  @media (max-width: 768px) {
+    .container {
+      @apply px-2; /* Adjust padding for smaller devices */
+    }
+  }
 }
 
 /* Flip card animation styles */
@@ -82,6 +88,12 @@
   transform: rotateY(180deg);
 }
 
+@media (max-width: 768px) {
+  .flip-card {
+    perspective: 600px; /* Adjust perspective for smaller screens */
+  }
+}
+
 /* Swiper styles */
 .product-swiper {
   --swiper-pagination-color: #4a90e2;
@@ -98,13 +110,14 @@
   justify-content: center;
   width: 32px;
   height: 32px;
-  color: transparent;
-  background: transparent;
 }
 
-.product-swiper .swiper-button-prev::after,
-.product-swiper .swiper-button-next::after {
-  display: none;
+@media (max-width: 768px) {
+  .product-swiper .swiper-button-prev,
+  .product-swiper .swiper-button-next {
+    width: 24px; /* Reduce button size for mobile */
+    height: 24px;
+  }
 }
 
 .product-swiper .swiper-pagination-bullet {
@@ -113,7 +126,6 @@
   margin: 0 5px;
 }
 
-/* Product Detail swiper styles */
 .product-detail-swiper {
   --swiper-pagination-color: #4a90e2;
   --swiper-pagination-bullet-inactive-color: #cccccc;
@@ -143,4 +155,12 @@
   background: white;
   border-radius: 50%;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .detail-swiper-button-prev,
+  .detail-swiper-button-next {
+    width: 24px; /* Adjust size for mobile screens */
+    height: 24px;
+  }
 }
