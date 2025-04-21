@@ -148,10 +148,32 @@
 
     .product-swiper .swiper-slide {
 
-.combo-pack-image {
-  max-height: 300px;
+.combo-pack-swiper {
+  height: 280px !important;
+}
+
+.combo-pack-swiper .swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.combo-pack-swiper .swiper-slide img {
   width: 100%;
-  object-fit: contain;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .combo-pack-swiper {
+    height: 240px !important;
+  }
+  
+  .combo-pack-swiper .swiper-button-prev,
+  .combo-pack-swiper .swiper-button-next {
+    width: 32px;
+    height: 32px;
+  }
 }
 
       display: flex;

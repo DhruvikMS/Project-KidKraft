@@ -45,25 +45,25 @@ export default function ComboPack() {
               <h3 className="font-baloo font-bold text-2xl">The Ultimate Learning Package</h3>
               <p className="text-gray-700">This complete collection includes all seven of our educational flashcard sets:</p>
 
-              <div className="grid grid-cols-2 gap-4">
-                {CATEGORIES.filter(c => c.id !== 'combo').map((category, index) => {
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+                {CATEGORIES.filter(c => c.id !== 'combo').map((category) => {
                   const colorMap: Record<string, string> = {
-                    alphabet: "text-primary",
-                    animal: "text-pink-500",
-                    birds: "text-green-500",
-                    colors: "text-yellow-600",
-                    fruit: "text-red-500",
-                    numbers: "text-purple-500",
-                    vegetables: "text-emerald-500"
+                    alphabet: "bg-blue-50 text-primary border-primary/20",
+                    animal: "bg-pink-50 text-pink-500 border-pink-200",
+                    birds: "bg-green-50 text-green-500 border-green-200",
+                    colors: "bg-yellow-50 text-yellow-600 border-yellow-200",
+                    fruit: "bg-red-50 text-red-500 border-red-200",
+                    numbers: "bg-purple-50 text-purple-500 border-purple-200",
+                    vegetables: "bg-emerald-50 text-emerald-500 border-emerald-200"
                   };
 
                   return (
                     <div 
                       key={category.id} 
-                      className={`bg-white rounded-lg p-3 shadow-sm ${index === (CATEGORIES.length - 1) && (CATEGORIES.length % 2 !== 0) ? 'col-span-2 md:col-span-1' : ''}`}
+                      className={`rounded-lg p-3 border ${colorMap[category.id]} shadow-sm`}
                     >
-                      <span className={`flex items-center ${colorMap[category.id]}`}>
-                        <Check className="h-4 w-4 mr-2" /> {category.name}
+                      <span className="flex items-center font-medium">
+                        <Check className="h-4 w-4 mr-2 flex-shrink-0" /> {category.name}
                       </span>
                     </div>
                   );
@@ -94,7 +94,7 @@ export default function ComboPack() {
             viewport={{ once: true }}
           >
             {/* Product Images Swiper */}
-            <div className="rounded-lg shadow-xl overflow-hidden border-4 border-indigo-100">
+            <div className="rounded-lg shadow-xl overflow-hidden border-2 border-indigo-100">
               <Swiper
                 onSwiper={setSwiperInstance}
                 slidesPerView={1}
@@ -102,17 +102,18 @@ export default function ComboPack() {
                 loop={true}
                 pagination={{
                   clickable: true,
+                  dynamicBullets: true,
                 }}
                 navigation={{
                   prevEl: '.combo-swiper-button-prev',
                   nextEl: '.combo-swiper-button-next',
                 }}
                 autoplay={{
-                  delay: 2500,
+                  delay: 3000,
                   disableOnInteraction: false,
                 }}
                 modules={[Pagination, Navigation, Autoplay]}
-                className="product-swiper"
+                className="combo-pack-swiper"
               >
                 {comboImages.map((image, index) => (
                   <SwiperSlide key={index}>
