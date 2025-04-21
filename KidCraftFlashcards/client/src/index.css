@@ -52,7 +52,8 @@
 
   @media (max-width: 768px) {
     .container {
-      @apply px-4 w-full box-border;
+      @apply px-4 w-full box-border max-w-full;
+      overflow-x: hidden;
     }
   }
 }

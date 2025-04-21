@@ -14,8 +14,8 @@ export default function Products() {
   const activeProduct = PRODUCTS.find(product => product.category === activeCategory) || PRODUCTS[1];
 
   return (
-    <section id="products" className="py-8 md:py-16 bg-white w-full">
-      <div className="container mx-auto">
+    <section id="products" className="py-8 md:py-16 bg-white">
+      <div className="container mx-auto overflow-x-hidden">
         <div className="text-center mb-6 md:mb-12">
           <h2 className="font-baloo font-bold text-2xl md:text-4xl text-dark mb-3">Our Flashcard Collections</h2>
           <p className="text-base md:text-lg text-gray-600">Explore our range of educational flashcards designed to make learning fun and effective.</p>
