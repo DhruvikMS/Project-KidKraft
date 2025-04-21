@@ -147,6 +147,13 @@
     }
 
     .product-swiper .swiper-slide {
+
+.combo-pack-image {
+  max-height: 300px;
+  width: 100%;
+  object-fit: contain;
+}
+
       display: flex;
       align-items: center;
       justify-content: center;

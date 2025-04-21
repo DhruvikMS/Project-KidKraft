@@ -10,7 +10,7 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules';
 
 export default function ComboPack() {
   const [swiperInstance, setSwiperInstance] = useState<any>(null);
-  
+
   // Get all images from all products for the combo pack display
   const comboImages = [
     "https://res.cloudinary.com/dutdrr57w/image/upload/f_webp/v1745126151/background2_h1jpfm.jpg",
@@ -32,7 +32,7 @@ export default function ComboPack() {
             Get all seven flashcard sets in one comprehensive bundle!
           </p>
         </div>
-        
+
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <motion.div 
             className="order-2 md:order-1"
@@ -44,7 +44,7 @@ export default function ComboPack() {
             <div className="space-y-6">
               <h3 className="font-baloo font-bold text-2xl">The Ultimate Learning Package</h3>
               <p className="text-gray-700">This complete collection includes all seven of our educational flashcard sets:</p>
-              
+
               <div className="grid grid-cols-2 gap-4">
                 {CATEGORIES.filter(c => c.id !== 'combo').map((category, index) => {
                   const colorMap: Record<string, string> = {
@@ -69,13 +69,13 @@ export default function ComboPack() {
                   );
                 })}
               </div>
-              
+
               <div className="pt-6">
                 <span className="block font-nunito font-bold text-dark text-xl mb-2">
                   Save 15% compared to buying separately!
                 </span>
                 <Button 
-                  className="bg-red-600 hover:bg-red-700 text-white font-nunito font-bold px-8 py-6 rounded-full shadow-lg transition-all transform hover:-translate-y-1 h-auto"
+                  className="w-full md:w-auto bg-red-600 hover:bg-red-700 text-white font-nunito font-bold px-8 py-3 rounded-full shadow-lg transition-all transform hover:-translate-y-1 h-auto"
                   asChild
                 >
                   <a href="https://amzn.in/d/fR5sawp" target="_blank" rel="noopener noreferrer" className="flex items-center">
@@ -85,7 +85,7 @@ export default function ComboPack() {
               </div>
             </div>
           </motion.div>
-          
+
           <motion.div 
             className="order-1 md:order-2"
             initial={{ opacity: 0, scale: 0.9 }}
@@ -125,7 +125,7 @@ export default function ComboPack() {
                     </div>
                   </SwiperSlide>
                 ))}
-                
+
                 {/* Custom navigation buttons */}
                 <div className="absolute top-1/2 -translate-y-1/2 left-2 z-10 combo-swiper-button-prev bg-white/80 hover:bg-white p-2 rounded-full shadow-md cursor-pointer">
                   <ChevronLeft className="h-5 w-5 text-gray-800" />
