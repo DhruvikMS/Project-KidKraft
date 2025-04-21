@@ -129,10 +129,10 @@ export default function Products() {
         </div>
         
         {/* Product Display */}
-        <div className="grid md:grid-cols-2 gap-8 items-start">
+        <div className="grid md:grid-cols-2 gap-8 items-start px-4 md:px-0">
           {/* Product Information */}
           <motion.div 
-            className="space-y-6"
+            className="space-y-6 w-full"
             key={activeProduct.id}
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}

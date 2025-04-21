@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .container {
+    @apply px-4 mx-auto max-w-7xl w-full;
+  }
+}
+
 /* Root Variables */
 @layer base {
   :root {
@@ -146,6 +152,23 @@
     .product-swiper,
     .product-detail-swiper {
       @apply px-2;
+      max-height: 300px;
+    }
+
+    .product-swiper img,
+    .product-detail-swiper img {
+      max-height: 300px;
+      object-fit: contain;
+    }
+
+    .container {
+      width: 100%;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    .grid {
+      grid-gap: 1rem;
     }
   }
 }
