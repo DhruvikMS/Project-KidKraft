@@ -36,10 +36,10 @@ export const PRODUCTS = [
       "Durable cards with rounded corners for little hands"
     ],
     images: [
-      "https://res.cloudinary.com/dutdrr57w/image/upload/f_webp/v1745126148/alphabet_flash_card_01_hpf8ql.jpg",
-      "https://res.cloudinary.com/dutdrr57w/image/upload/f_webp/v1745126153/alphabet_flash_card_02_iy8rpg.jpg",
-      "https://res.cloudinary.com/dutdrr57w/image/upload/f_webp/v1745126147/alphabet_flash_card_03_aop9ek.jpg",
-      "https://res.cloudinary.com/dutdrr57w/image/upload/f_webp/v1745126150/alphabet_flash_card_04_bolkoj.jpg"
+      "https://res.cloudinary.com/dutdrr57w/image/upload/v1/alphabet_flash_card_01_hpf8ql.jpg",
+      "https://res.cloudinary.com/dutdrr57w/image/upload/v1/alphabet_flash_card_02_iy8rpg.jpg", 
+      "https://res.cloudinary.com/dutdrr57w/image/upload/v1/alphabet_flash_card_03_aop9ek.jpg",
+      "https://res.cloudinary.com/dutdrr57w/image/upload/v1/alphabet_flash_card_04_bolkoj.jpg"
     ]
   },
   {
@@ -55,10 +55,10 @@ export const PRODUCTS = [
       "Stunning photographs of birds from around the world"
     ],
     images: [
-      "https://res.cloudinary.com/dutdrr57w/image/upload/f_webp/v1745126166/birds_card_01_ey7hsn.jpg",
-      "https://res.cloudinary.com/dutdrr57w/image/upload/f_webp/v1745126157/birds_card_02_wiuzqu.jpg",
-      "https://res.cloudinary.com/dutdrr57w/image/upload/f_webp/v1745126163/birds_card_03_n1vub3.jpg",
-      "https://res.cloudinary.com/dutdrr57w/image/upload/f_webp/v1745126159/birds_card_04_ey5luc.jpg"
+      "https://res.cloudinary.com/dutdrr57w/image/upload/v1/birds_card_01_ey7hsn.jpg",
+      "https://res.cloudinary.com/dutdrr57w/image/upload/v1/birds_card_02_wiuzqu.jpg",
+      "https://res.cloudinary.com/dutdrr57w/image/upload/v1/birds_card_03_n1vub3.jpg",
+      "https://res.cloudinary.com/dutdrr57w/image/upload/v1/birds_card_04_ey5luc.jpg"
     ]
   },
   {

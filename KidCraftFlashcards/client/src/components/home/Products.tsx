@@ -16,9 +16,9 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules';
 export default function Products() {
   const [activeCategory, setActiveCategory] = useState("birds");
   const [swiperInstance, setSwiperInstance] = useState<any>(null);
-  
+
   const activeProduct = PRODUCTS.find(product => product.category === activeCategory) || PRODUCTS[1];
-  
+
   const getCategoryColorClass = (category: string, isActive: boolean) => {
     const colorMap: Record<string, { bg: string, text: string, activeBg: string, activeText: string, border: string }> = {
       alphabet: {
@@ -78,13 +78,13 @@ export default function Products() {
         border: "border-indigo-500"
       }
     };
-    
+
     const colorClass = colorMap[category] || colorMap.alphabet;
     return isActive ? 
       `${colorClass.activeBg} ${colorClass.activeText} ${colorClass.border}` : 
       `${colorClass.bg} ${colorClass.text} hover:${colorClass.activeBg} hover:${colorClass.activeText} ${colorClass.border}`;
   };
-  
+
   const getActiveTextColor = (category: string) => {
     const colorMap: Record<string, string> = {
       alphabet: "text-primary",
@@ -96,7 +96,7 @@ export default function Products() {
       vegetables: "text-emerald-500",
       combo: "text-indigo-500"
     };
-    
+
     return colorMap[category] || colorMap.alphabet;
   };
 
@@ -114,7 +114,7 @@ export default function Products() {
           <h2 className="font-baloo font-bold text-3xl md:text-4xl text-dark mb-4">Our Flashcard Collections</h2>
           <p className="text-lg max-w-3xl mx-auto text-gray-600">Explore our range of educational flashcards designed to make learning fun and effective.</p>
         </div>
-        
+
         {/* Categories Navigation */}
         <div className="flex flex-wrap justify-center gap-3 mb-12">
           {CATEGORIES.map((category) => (
@@ -127,12 +127,12 @@ export default function Products() {
             </button>
           ))}
         </div>
-        
+
         {/* Product Display */}
         <div className="grid md:grid-cols-2 gap-8 items-start px-4 md:px-0">
           {/* Product Information */}
           <motion.div 
-            className="space-y-6 w-full"
+            className="space-y-6 w-full max-w-2xl mx-auto"
             key={activeProduct.id}
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -143,7 +143,7 @@ export default function Products() {
             </h3>
             <div className="space-y-4">
               <p className="text-gray-700 text-lg">{activeProduct.description}</p>
-              
+
               <ul className="space-y-3">
                 {activeProduct.features.map((feature, index) => (
                   <li key={index} className="flex items-start">
@@ -154,7 +154,7 @@ export default function Products() {
                   </li>
                 ))}
               </ul>
-              
+
               <div className="pt-4">
                 <Button
                   className="bg-red-600 hover:bg-red-700 text-white font-nunito font-bold px-8 py-6 rounded-full shadow-lg transition-all transform hover:-translate-y-1 h-auto"
@@ -172,7 +172,7 @@ export default function Products() {
               </div>
             </div>
           </motion.div>
-          
+
           {/* Product Visuals with Swiper */}
           <motion.div 
             className="space-y-6"
@@ -213,7 +213,7 @@ export default function Products() {
                     </div>
                   </SwiperSlide>
                 ))}
-                
+
                 {/* Custom navigation buttons */}
                 <div className="absolute top-1/2 -translate-y-1/2 left-2 z-10 swiper-button-prev bg-white/80 hover:bg-white p-2 rounded-full shadow-md cursor-pointer">
                   <ChevronLeft className="h-5 w-5 text-gray-800" />
@@ -223,7 +223,7 @@ export default function Products() {
                 </div>
               </Swiper>
             </div>
-            
+
             {activeProduct.category === 'combo' && (
               <div className="p-4 bg-indigo-50 rounded-lg border border-indigo-100">
                 <p className="text-center font-semibold text-indigo-700">
