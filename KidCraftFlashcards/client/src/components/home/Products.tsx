@@ -94,7 +94,7 @@ export default function Products() {
                   disableOnInteraction: false,
                 }}
                 modules={[Pagination, Navigation, Autoplay]}
-                className="w-full aspect-[4/3]"
+                className="w-full aspect-[4/3] max-h-[400px]"
               >
                 {activeProduct.images.map((image, index) => (
                   <SwiperSlide key={index}>

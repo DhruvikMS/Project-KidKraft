@@ -143,8 +143,21 @@
     .product-swiper,
     .product-detail-swiper {
       @apply px-0;
-      max-height: none;
+      max-height: 300px;
       aspect-ratio: 4/3;
+    }
+
+    .swiper img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      max-height: 300px;
+    }
+
+    .category-buttons {
+      @apply grid grid-cols-2 md:grid-cols-4 gap-2;
+      width: 100%;
+      overflow-x: visible;
     }
 
     .product-swiper img,
