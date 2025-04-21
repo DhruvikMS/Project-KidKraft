@@ -17,4 +17,8 @@ mode = "sequential"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
-args = "npm run dev"
+args = "cd KidCraftFlashcards && npm install && npm run dev"
+
+[[ports]]
+localPort = 5000
+externalPort = 80
