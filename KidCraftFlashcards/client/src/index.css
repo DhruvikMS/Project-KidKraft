@@ -47,12 +47,12 @@
 /* Container */
 @layer components {
   .container {
-    @apply px-4 max-w-screen-lg mx-auto overflow-hidden;
+    @apply px-4 max-w-screen-lg mx-auto;
   }
 
   @media (max-width: 768px) {
     .container {
-      @apply px-2;
+      @apply px-4 w-full box-border;
     }
   }
 }
