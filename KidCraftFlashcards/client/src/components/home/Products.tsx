@@ -94,15 +94,15 @@ export default function Products() {
                   disableOnInteraction: false,
                 }}
                 modules={[Pagination, Navigation, Autoplay]}
-                className="w-full aspect-[4/3] max-h-[400px]"
+                className="product-swiper w-full aspect-[4/3]"
               >
                 {activeProduct.images.map((image, index) => (
-                  <SwiperSlide key={index}>
+                  <SwiperSlide key={index} className="!flex items-center justify-center">
                     <img 
                       src={image} 
                       alt={`${activeProduct.name} - Image ${index + 1}`}
-                      className="w-full h-full object-cover"
-                      loading="lazy"
+                      className="w-full h-auto max-h-[300px] object-contain"
+                      loading="eager"
                     />
                   </SwiperSlide>
                 ))}
