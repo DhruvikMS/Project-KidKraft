@@ -1,17 +1,19 @@
-
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import themePlugin from "@replit/vite-plugin-shadcn-theme-json";
 import path from "path";
 import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
 
+const serverConfig = {
+  host: '0.0.0.0',
+  hmr: {
+    clientPort: 443,
+    host: '0.0.0.0'
+  }
+};
+
 export default defineConfig({
-  server: {
-    host: '0.0.0.0',
-    hmr: {
-      host: '0.0.0.0'
-    }
-  },
+  server: serverConfig,
   plugins: [
     react(),
     runtimeErrorOverlay(),
@@ -25,13 +27,6 @@ export default defineConfig({
         ]
       : []),
   ],
-  server: {
-    host: '0.0.0.0',
-    hmr: {
-      clientPort: 443,
-      host: '0.0.0.0'
-    }
-  },
   resolve: {
     alias: {
       "@": path.resolve(import.meta.dirname, "client", "src"),
